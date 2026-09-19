@@ -35,6 +35,8 @@
   min-height: 48px;
   transition: all var(--transition-fast);
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .form-control:focus {
