@@ -1,0 +1,373 @@
+/* ==========================================================================
+   ANISQ LTD — Photography Website
+   Page-Specific Layouts (Hero, Editorial About, Timelines, Stories, 404)
+   ========================================================================== */
+
+/* --- Home Hero Section --- */
+.hero-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-ink);
+  color: #FFFDFB;
+  overflow: hidden;
+  padding: var(--space-3xl) 0;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 90vh;
+  }
+}
+
+.hero-backdrop-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide.active {
+  opacity: 0.45;
+  transform: scale(1.04);
+  transition: opacity 1.2s ease-in-out, transform 8s ease-out;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(36, 31, 28, 0.4) 0%, rgba(36, 31, 28, 0.85) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  color: #FFFDFB;
+  margin-bottom: var(--space-md);
+  font-size: clamp(2.5rem, 6vw + 1rem, 4.25rem);
+}
+
+.hero-content p.lead {
+  color: rgba(255, 253, 251, 0.88);
+  margin-bottom: var(--space-xl);
+  max-width: 640px;
+}
+
+/* --- Process Timeline (Home & Service Pages) --- */
+.process-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  position: relative;
+  margin-top: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .process-timeline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.process-step-num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-primary-light);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.process-step-num span {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-step h4 {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-xs);
+}
+
+.process-step p {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* --- Editorial Magazine Layout (About Page) --- */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-3xl);
+  }
+}
+
+.about-portrait-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-portrait-wrap img {
+  width: 100%;
+  height: 520px;
+  max-height: 75vh;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .about-portrait-wrap img {
+    height: 360px;
+  }
+  .about-experience-badge {
+    bottom: 14px;
+    left: 14px;
+    padding: 10px 16px;
+  }
+  .about-experience-badge h4 {
+    font-size: 1.35rem;
+  }
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background-color: var(--color-card);
+  padding: 16px 22px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-card-border);
+}
+
+.about-experience-badge h4 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-experience-badge p {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.values-numbered-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.value-item {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.value-num {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* --- Story Scrolling Page (Portfolio Detail) --- */
+.story-header {
+  padding: var(--space-3xl) 0 var(--space-xl) 0;
+  text-align: center;
+}
+
+.story-meta-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.story-quote-banner {
+  background-color: var(--color-surface-subtle);
+  border-left: 4px solid var(--color-primary);
+  padding: var(--space-xl);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  margin: var(--space-2xl) 0;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.story-gear-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+/* --- Add-on Calculator (Pricing Page) --- */
+.addon-calculator {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--space-3xl);
+}
+
+.addon-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+@media (min-width: 640px) {
+  .addon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.addon-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.addon-item:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.addon-item.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.addon-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.addon-price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.calc-summary-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .calc-summary-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.calc-total-display {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-ink);
+}
+
+/* --- 404 Page Styling --- */
+.error-page-container {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.error-camera-graphic {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto var(--space-xl) auto;
+  color: var(--color-primary);
+  opacity: 0.9;
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* --- Contact Map & Area Container --- */
+.service-map-container {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-card-border);
+  background-color: var(--color-card);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.map-svg-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "anisq-photography-website",
+  "version": "1.0.0",
+  "description": "Production-ready, mobile-first website for ANISQ LTD Photography",
+  "scripts": {
+    "start": "npx -y serve . -p 3000",
+    "dev": "npx -y serve . -p 3000"
+  },
+  "keywords": ["photography", "london", "enfield", "anisq"],
+  "author": "ANISQ LTD",
+  "license": "ISC"
+}
