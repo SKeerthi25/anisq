@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DE7452"/>
+      <stop offset="50%" stop-color="#C75B39"/>
+      <stop offset="100%" stop-color="#9C3A1D"/>
+    </linearGradient>
+    <linearGradient id="goldGleam" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#241F1C" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Ring with Lens Markings -->
+  <circle cx="60" cy="60" r="54" stroke="url(#terracottaGrad)" stroke-width="2.5" stroke-dasharray="8 4 2 4" opacity="0.6"/>
+  <circle cx="60" cy="60" r="50" fill="#241F1C" filter="url(#softShadow)"/>
+  
+  <!-- Geometric Aperture Shutter Blades -->
+  <g transform="translate(60, 60)">
+    <!-- Blade 1 -->
+    <path d="M0 -42 L24 -24 L7 -12 L-18 -26 Z" fill="url(#terracottaGrad)" opacity="0.95"/>
+    <!-- Blade 2 -->
+    <path d="M0 -42 L24 -24 L7 -12 L-18 -26 Z" fill="url(#terracottaGrad)" opacity="0.95" transform="rotate(60)"/>
+    <!-- Blade 3 -->
+    <path d="M0 -42 L24 -24 L7 -12 L-18 -26 Z" fill="url(#terracottaGrad)" opacity="0.95" transform="rotate(120)"/>
+    <!-- Blade 4 -->
+    <path d="M0 -42 L24 -24 L7 -12 L-18 -26 Z" fill="url(#terracottaGrad)" opacity="0.95" transform="rotate(180)"/>
+    <!-- Blade 5 -->
+    <path d="M0 -42 L24 -24 L7 -12 L-18 -26 Z" fill="url(#terracottaGrad)" opacity="0.95" transform="rotate(240)"/>
+    <!-- Blade 6 -->
+    <path d="M0 -42 L24 -24 L7 -12 L-18 -26 Z" fill="url(#terracottaGrad)" opacity="0.95" transform="rotate(300)"/>
+    
+    <!-- Subtle Inner Aperture Cutout -->
+    <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="#1C1715"/>
+    
+    <!-- Grand Monogram 'A' Centered in Lens Apex -->
+    <path d="M0 -14 L10 13 L5.5 13 L3 6.5 L-3 6.5 L-5.5 13 L-10 13 Z M0 -7 L-2.2 2 L2.2 2 Z" fill="#FFFDFB" font-weight="800"/>
+    
+    <!-- Precision Lens Optical Crosshair Dots -->
+    <circle cx="0" cy="-46" r="1.5" fill="#C75B39"/>
+    <circle cx="46" cy="0" r="1.5" fill="#C75B39"/>
+    <circle cx="0" cy="46" r="1.5" fill="#C75B39"/>
+    <circle cx="-46" cy="0" r="1.5" fill="#C75B39"/>
+  </g>
+  
+  <!-- Subtle Glass Sheen Overlay -->
+  <circle cx="60" cy="60" r="48" fill="url(#goldGleam)"/>
+</svg>

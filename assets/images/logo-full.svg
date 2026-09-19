@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="terracottaGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DE7452"/>
+      <stop offset="50%" stop-color="#C75B39"/>
+      <stop offset="100%" stop-color="#9C3A1D"/>
+    </linearGradient>
+    <linearGradient id="goldGleamFull" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Emblem Mark -->
+  <g transform="translate(45, 45)">
+    <!-- Outer Lens Ring -->
+    <circle cx="0" cy="0" r="38" stroke="url(#terracottaGradFull)" stroke-width="2" stroke-dasharray="6 3 2 3" opacity="0.6"/>
+    <circle cx="0" cy="0" r="34" fill="#241F1C"/>
+    
+    <!-- Aperture Blades -->
+    <g>
+      <path d="M0 -28 L16 -16 L5 -8 L-12 -17 Z" fill="url(#terracottaGradFull)" opacity="0.95"/>
+      <path d="M0 -28 L16 -16 L5 -8 L-12 -17 Z" fill="url(#terracottaGradFull)" opacity="0.95" transform="rotate(60)"/>
+      <path d="M0 -28 L16 -16 L5 -8 L-12 -17 Z" fill="url(#terracottaGradFull)" opacity="0.95" transform="rotate(120)"/>
+      <path d="M0 -28 L16 -16 L5 -8 L-12 -17 Z" fill="url(#terracottaGradFull)" opacity="0.95" transform="rotate(180)"/>
+      <path d="M0 -28 L16 -16 L5 -8 L-12 -17 Z" fill="url(#terracottaGradFull)" opacity="0.95" transform="rotate(240)"/>
+      <path d="M0 -28 L16 -16 L5 -8 L-12 -17 Z" fill="url(#terracottaGradFull)" opacity="0.95" transform="rotate(300)"/>
+      
+      <!-- Inner Core -->
+      <polygon points="0,-11 9,-5.5 9,5.5 0,11 -9,5.5 -9,-5.5" fill="#1C1715"/>
+      <!-- Monogram 'A' -->
+      <path d="M0 -10 L7 9 L3.8 9 L2 4.5 L-2 4.5 L-3.8 9 L-7 9 Z M0 -5 L-1.5 1.5 L1.5 1.5 Z" fill="#FFFDFB"/>
+    </g>
+    <!-- Glass Sheen -->
+    <circle cx="0" cy="0" r="33" fill="url(#goldGleamFull)"/>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="96" y1="22" x2="96" y2="68" stroke="#C75B39" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Brand Typography -->
+  <g transform="translate(112, 0)">
+    <!-- Main Title -->
+    <text x="0" y="48" font-family="'Outfit', 'Inter', -apple-system, sans-serif" font-size="34" font-weight="800" letter-spacing="4" fill="#241F1C">
+      ANISQ
+    </text>
+    
+    <!-- Subtitle / Tagline -->
+    <text x="2" y="68" font-family="'Outfit', 'Inter', -apple-system, sans-serif" font-size="10.5" font-weight="700" letter-spacing="3.5" fill="#C75B39">
+      PHOTOGRAPHY &bull; LONDON
+    </text>
+  </g>
+</svg>
