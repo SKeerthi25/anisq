@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-GB" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,51 @@
   <link rel="stylesheet" href="assets/css/components.css">
 
   <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ANISQ LTD",
+    "image": "https://www.anisqphoto.co.uk/assets/photos/photo-01.png",
+    "@id": "https://www.anisqphoto.co.uk/",
+    "url": "https://www.anisqphoto.co.uk/contact.html",
+    "telephone": "+447789973080",
+    "email": "photo@anisqltd.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Flat 30 Webley Court, 3 Sten Close",
+      "addressLocality": "Enfield",
+      "addressRegion": "Greater London",
+      "postalCode": "EN3 6WX",
+      "addressCountry": "GB"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "16:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -276,9 +321,8 @@
 
               <h4 style="margin-bottom: var(--space-xs);">Studio Operating Hours</h4>
               <ul style="list-style: none; font-size: 0.85rem; color: var(--color-muted); display: flex; flex-direction: column; gap: 6px;">
-                <li style="display: flex; justify-content: space-between;"><span>Monday – Friday:</span> <strong>08:30 – 19:00</strong></li>
-                <li style="display: flex; justify-content: space-between;"><span>Saturday:</span> <strong>08:00 – 21:00 (Shoots & Weddings)</strong></li>
-                <li style="display: flex; justify-content: space-between;"><span>Sunday:</span> <strong>09:00 – 18:00 (By Appointment)</strong></li>
+                <li style="display: flex; justify-content: space-between;"><span>Monday – Friday:</span> <strong>09:00 – 18:00</strong></li>
+                <li style="display: flex; justify-content: space-between;"><span>Saturday – Sunday:</span> <strong>10:00 – 16:00</strong></li>
               </ul>
             </div>
 
@@ -374,6 +418,10 @@
           <div class="footer-contact-item">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <a href="tel:07789973080">07789973080</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Mon–Fri: 09:00–18:00 | Sat–Sun: 10:00–16:00</span>
           </div>
         </div>
       </div>
