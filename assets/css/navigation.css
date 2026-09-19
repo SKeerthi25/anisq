@@ -84,10 +84,19 @@
   flex-direction: column;
 }
 
-.brand-logo .logo-title {
-  line-height: 1;
+.brand-logo .logo-title,
+.brand-logo > div:not(.logo-mark) > span:first-child {
+  font-size: clamp(1.15rem, 3.8vw, 1.45rem);
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+  line-height: 1.1;
+  display: block;
+}
+
+[data-theme="dark"] .brand-logo .logo-title,
+[data-theme="dark"] .brand-logo > div:not(.logo-mark) > span:first-child {
+  color: #FFFDFB;
 }
 
 .brand-logo .logo-tag {
@@ -98,7 +107,7 @@
   color: var(--color-primary);
   display: block;
   line-height: 1;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 /* Desktop Navigation */
